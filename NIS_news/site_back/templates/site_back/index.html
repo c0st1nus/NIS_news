@@ -47,7 +47,19 @@
     </div>
   </nav>
 
-  <!-- Основное содержимое вашего сайта будет здесь -->
+  <!-- Отображение статей -->
+  <div class="container mt-4">
+    {% for article in articles %}
+      <div class="card mb-4">
+        <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <p class="card-text">{{ article.text }}</p>
+          <a href="{{ article.link }}" class="btn btn-primary">Читать далее</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
   <!-- Подключение Bootstrap JS (необходимо для работы некоторых функций Bootstrap) -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
