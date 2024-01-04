@@ -21,5 +21,6 @@ from site_back.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name='index'),
+    path('news/', index, name='news')
 ]

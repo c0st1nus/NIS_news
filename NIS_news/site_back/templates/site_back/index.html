@@ -1,69 +1,17 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Your Website</title>
-  <style>
-    /* Добавим немного стилей для красивого отображения */
-    body {
-      padding-top: 56px;
-    }
-
-    @media (min-width: 768px) {
-      body {
-        padding-top: 72px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>NEWS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
-  <!-- Навигационное меню с использованием Bootstrap -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Главная</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Поступление</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Достижения</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Рубрики</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Возможности</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Медиа клуб</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Отображение статей -->
-  <div class="container mt-4">
-    {% for article in articles %}
-      <div class="card mb-4">
-        <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ article.title }}</h5>
-          <p class="card-text">{{ article.text }}</p>
-          <a href="{{ article.link }}" class="btn btn-primary">Читать далее</a>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-
-  <!-- Подключение Bootstrap JS (необходимо для работы некоторых функций Bootstrap) -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <nav class="main_panel">
+        <ul>
+            <li><a href="{% url 'index' %}">MAIN</a></li>
+            <li><a href="{% url 'news' %}">NEWS</a></li>
+        </ul>
+    </nav>
 </body>
 </html>

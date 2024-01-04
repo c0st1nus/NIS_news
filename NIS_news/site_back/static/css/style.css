@@ -1,0 +1,21 @@
+.main_panel{
+    position: absolute;
+    top:0;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    direction: ltr;
+}
+.main_panel li{
+    font-style: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    color: white;
+    list-style: none;
+}
+.main_panel li a{
+    color: white;
+    text-decoration: none;
+}
