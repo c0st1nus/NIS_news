@@ -1,8 +1,10 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
 .main_panel {
     font-family: Inter, sans-serif;
     position: absolute;
     top: 0;
-    height: 35px;
+    height: 50px;
     width: 100%;
     left: 0;
     background-color: black;
@@ -19,7 +21,7 @@
 
 .main_panel li {
     font-style: normal;
-    font-family: 'Helvetica', sans-serif;
+    font-family: Raleway;
     font-weight: 500;
     margin-left: 10px;
     margin-right: 35px;
@@ -32,6 +34,12 @@
     padding: 10px;
     display: block;
 }
+
+
+
+/*-------------------------------------DROPDOWN---------------------------------*/
+
+
 
 .dropdown{
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -91,4 +99,90 @@
     background-color: #D9D9D9;
     border-radius: 10px;
     width: 95%;
+}
+
+
+
+/* -------------------------LOADING ANIMATION--------------------------- */
+
+
+
+.loader {
+    justify-content: center;
+     
+      display: flex;
+      background-color: black;
+}
+ 
+.loader::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #000000;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+
+
+/* -----------------------------------NAVBAR-------------------------------------- */
+
+
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
 }

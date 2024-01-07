@@ -1,52 +1,16 @@
-{% load static %} 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>NEWS</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <nav class="main_panel">
-        <ul>
-            <li><a href="{% url 'main' %}">logo</a></li>
-            <li><a href="{% url 'news' %}">news</a></li>
-            <li><a href="{% url 'admission' %}">admission</a></li>
-            <li><a href="{% url 'media_club' %}">media club</a></li>
-            <li class="dropdown">
-                <a href="#" onclick="toggleDropdown()">More</a>
-                <div id="dropdownContent" class="dropdown-content">
-                    <a href="#Competitions">Competitions</a>
-                    <a href="#Awards">Awards</a>
-                    <a href="#Categories">Categories</a>
-                    <a href="#Admin">Admin</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div class="main_content">
-        <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
-        <div class="news">
-            <img src="" alt="img">
-            <p>Текст</p>
-        </div>
+{% extends "base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+{% block content %}
+
+<div class="main_content">
+    <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
+    <div class="news">
+        <img src="" alt="img">
+        <p>Текст</p>
     </div>
-
-
-
-
-    <script>
-        function toggleDropdown() {
-            const dropdownContent = document.getElementById("dropdownContent");
-            dropdownContent.classList.toggle("show");
-        }
-
-        document.addEventListener("click", function(event) {
-            const dropdownContent = document.getElementById("dropdownContent");
-            if (!event.target.closest(".dropdown") && dropdownContent.classList.contains("show")) {
-                dropdownContent.classList.remove("show");
-            }
-        });
-    </script>
-</body>
-</html>
+</div>
+{% endblock %}

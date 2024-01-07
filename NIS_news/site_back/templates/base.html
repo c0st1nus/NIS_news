@@ -3,11 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}NEWS{%endblock%}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <div class="loader"><p class = "ltext">NIS Press</p></div>
+<div class = "container topBotomBordersOut">
     <nav class="main_panel">
         <ul>
             <li><a href="{% url 'main' %}">logo</a></li>
@@ -25,8 +27,8 @@
             </li>
         </ul>
     </nav>
-    {%block content%}
-    {%endblock%}
+</div>
+    {%block content%}NEWS{%endblock%}
     <script>
         function toggleDropdown() {
             const dropdownContent = document.getElementById("dropdownContent");
@@ -39,6 +41,12 @@
                 dropdownContent.classList.remove("show");
             }
         });
+
+        window.addEventListener('load', function () {
+            const loader = document.querySelector('.loader');
+            loader.classList.add('hidden');
+        });
     </script>
+    <script src="{% static 'javascript/animation.js' %}"></script>
 </body>
 </html>
