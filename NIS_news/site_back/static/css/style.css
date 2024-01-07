@@ -1,4 +1,5 @@
 .main_panel {
+    font-family: Inter, sans-serif;
     position: absolute;
     top: 0;
     height: 35px;
@@ -61,7 +62,11 @@
     display: block;
 }
 
-.news{
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-width: 340px;
     max-width: 690px;
     font-family: Helvetica, sans-serif;
@@ -70,23 +75,20 @@
     border-radius: 7px;
 }
 .news img{
+    margin: 10px 10px 0 10px;
     background-color: #D9D9D9;
     min-height: 200px;
-    min-width: 100%;
-    width: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    width: 95%;
 }
 .news p{
+    margin: 10px;
+    padding: 2px;
     display: flex;
     align-items: center;
     min-height: 100px;
     background-color: #D9D9D9;
     border-radius: 10px;
-}
-.news h2{
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
+    width: 95%;
 }
