@@ -20,8 +20,8 @@ from django.urls import path
 from site_back.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path('admin/', admin.site.urls, name='administrator'),
+    path('', index, name='main'),
     path('news/', index, name='news'),
     path('admission/', index, name='admission'),
     path('media_club/', index, name='media_club')

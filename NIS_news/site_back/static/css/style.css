@@ -32,21 +32,26 @@
     display: block;
 }
 
+.dropdown{
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
 .dropdown-content {
-    display: none;
+    border-radius: 5px;
     position: absolute;
     background-color: black;
     min-width: 160px;
     z-index: 1;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .dropdown-content.show {
-    display: block;
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
 }
 
 .dropdown-content a {
@@ -55,3 +60,9 @@
     text-decoration: none;
     display: block;
 }
+
+.news{
+    background-color: #333333;
+    border-radius: 7px;
+}
+.news
