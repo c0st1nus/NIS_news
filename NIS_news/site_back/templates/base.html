@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NEWS</title>
+    
+    <title>{%block title%}NEWS{%endblock%}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -24,20 +25,8 @@
             </li>
         </ul>
     </nav>
-    <div class="news">
-        <h1>Новости</h1>
-        <div class="news_list">
-            <div class="news_item">
-                <h2>Заголовок новости</h2>
-                <p>1ый абзац</p>
-                <p>2ой абзац</p>
-            </div>
-        </div>
-    </div>
-
-
-
-
+    {%block content%}
+    {%endblock%}
     <script>
         function toggleDropdown() {
             const dropdownContent = document.getElementById("dropdownContent");
