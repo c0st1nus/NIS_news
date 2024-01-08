@@ -5,12 +5,13 @@ NEWS
 {% endblock %}
 
 {% block content %}
-
-<div class="main_content">
     <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
-    <div class="news">
-        <img src="" alt="img">
-        <p>Текст</p>
-    </div>
-</div>
+        <div class="main_content">
+            {% for ar in articles %}
+            <div class="news">
+                <img src="{{ ar.image }}" alt="img">
+                <p>{{ ar.text }}</p>
+            </div>
+            {% endfor %}
+        </div>
 {% endblock %}
