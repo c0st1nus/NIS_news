@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from site_back.views import index
+from site_back.views import index, tag_viev
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='administrator'),
     path('', index, name='main'),
     path('news/', index, name='news'),
     path('admission/', index, name='admission'),
-    path('media_club/', index, name='media_club')
+    path('media_club/', index, name='media_club'),
+    path('tags/<str:tag>/', tag_viev, name='tags'),
 ]

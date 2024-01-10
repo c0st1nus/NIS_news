@@ -107,6 +107,26 @@
     width: 95%;
 }
 
+.main_panel li input[placeholder="Tag search"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.main_panel li button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 
 
 /* -------------------------LOADING ANIMATION--------------------------- */

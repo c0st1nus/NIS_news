@@ -25,11 +25,21 @@
                     <a href="#Admin">Admin</a>
                 </div>
             </li>
+            <li>
+                <input type="text" placeholder="Tag search">
+                <button onclick="searchByTag()">Search</button>
+            </li>
         </ul>
     </nav>
 </div>
     {%block content%}NEWS{%endblock%}
     <script>
+        function searchByTag() {
+            const tag = document.querySelector('input[placeholder="Tag search"]').value;
+            if (tag) {
+                window.location.href = '/tags/' + tag + '/';
+            }
+        }
         function toggleDropdown() {
             const dropdownContent = document.getElementById("dropdownContent");
             dropdownContent.classList.toggle("show");
