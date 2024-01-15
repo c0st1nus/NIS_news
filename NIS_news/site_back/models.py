@@ -6,6 +6,7 @@ class Article(models.Model):
     author_name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='article_images/', null=True, blank=True)
     link = models.URLField(blank=True)
+    introduction = models.TextField(blank=True)
     text = models.TextField()
     tags = models.CharField(max_length=200, blank=True)
     publish_date = models.DateTimeField(auto_now_add=True)

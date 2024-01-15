@@ -89,6 +89,8 @@
 }
 
 .news img{
+    color: black;
+    text-decoration: none;
     margin: 10px 10px 0 10px;
     background-color: #D9D9D9;
     min-height: 200px;
@@ -97,6 +99,8 @@
     width: 95%;
 }
 .news p{
+    color: black;
+    text-decoration: none;
     margin: 10px;
     padding: 2px;
     display: flex;
@@ -126,6 +130,11 @@
 
 button:hover {
     background-color: #45a049;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
 }
 
 

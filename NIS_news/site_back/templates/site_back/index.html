@@ -8,10 +8,10 @@ NEWS
     <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
         <div class="main_content">
             {% for ar in articles %}
-            <div class="news">
+            <a href="{% url 'article' ar.id %}" class="link"><div class="news">
                 <img src="{{ ar.image }}" alt="img">
-                <p>{{ ar.text }}</p>
-            </div>
+                <p>{{ ar.introduction }}</p>
+            </div></a>
             {% endfor %}
         </div>
 {% endblock %}
