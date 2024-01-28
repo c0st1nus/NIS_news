@@ -4,7 +4,7 @@
     font-family: Inter, sans-serif;
     position: absolute;
     top: 0;
-    height: 50px;
+    height: 60px;
     width: 100%;
     left: 0;
     background-color: black;
@@ -23,9 +23,12 @@
     font-style: normal;
     font-family: Raleway, serif;
     font-weight: 500;
-    margin-left: 10px;
-    margin-right: 35px;
+    margin-right: 80px;
     color: white;
+}
+
+.main_panel li:first-child {
+    margin-left: 50px;
 }
 
 .main_panel li a {
@@ -34,8 +37,6 @@
     padding: 10px;
     display: block;
 }
-
-
 
 /*-------------------------------------DROPDOWN---------------------------------*/
 
@@ -111,25 +112,55 @@
     width: 95%;
 }
 
+.search_wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 15vw;
+    margin-left: 29vw;
+}
+
+.bx-search{
+    position: absolute;
+    z-index: 1001;
+    color: #000;
+    font-size: 22px;
+    padding-left: 7px;
+}
+
 .main_panel li input[placeholder="Tag search"] {
-    padding: 10px;
-    font-size: 14px;
+    width: 14vw;
+    padding: 10px 10px 10px 33px;
+    font-size: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
+    z-index: 1000;
+    transition: .35s ease;
+}
+
+.main_panel li input:focus {
+    outline: none;
+    box-shadow: 0 0 15px #FFF;
 }
 
 .main_panel li button {
-    padding: 10px 20px;
-    font-size: 14px;
+    position: absolute;
+    z-index: 1002;
+    top: 3px;
+    right: 3px;
+    padding: 8px 20px;
+    font-size: 16px;
     border: none;
-    border-radius: 4px;
-    background-color: #4CAF50;
+    border-radius: 20px;
+    background-color: #000;
     color: white;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #fff;
+    transform: scale(1.02);
 }
 
 .link {
@@ -220,4 +251,64 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 {
     opacity: 1;
     transform: translateY(0px);
+}
+
+/* -----------------------------------ADMISSION-------------------------------------- */
+
+.university_content{
+    font-family: Inter, sans-serif;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.university_page_name{
+    font-size: 40px;
+}
+
+.university_head{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 55px;
+    background-color: #6ed4d1;
+    box-shadow:  3px 3px 5px #9e9e9e;
+    border-radius: 0.7vw;
+    margin-bottom: 1.5vw;
+    color: #fff;
+}
+
+.university_head div:first-child{
+    margin-left: 2.8vw;
+}
+
+.university_head div{
+    margin-left: 5.5vw;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.university_head div:last-child{
+    margin-left: 19.2vw;
+}
+
+.university_block{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw 0 2vw;
+    align-items: center;
+    width: 46vw;
+    height: 80px;
+    background-color: #dfdfdf;
+    box-shadow:  5px 5px 5px #a1a1a1;
+    border-radius: 1vw;
+    margin-bottom: 1.5vw;
+}
+
+.university_block a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.university_logo{
+    font-size: 20px;
 }

@@ -13,3 +13,6 @@ def tag_viev(request, tag):
 def article(request, article_id):
     article = Article.objects.get(id=article_id)
     return render(request, 'site_back/article.html', {'article': article})
+
+def admission(request):
+    return render(request, 'site_back/admission.html')

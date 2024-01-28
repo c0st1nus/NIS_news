@@ -1,1 +1,22 @@
-{% extends base.html %}
+{% extends "base.html" %}
+
+{% block title %}
+Admissions
+{% endblock %}
+
+{% block content %}
+    <div class="university_content">
+        <h1 class="university_page_name">Universities</h1>
+        <div class="university_head">
+            <div>Rank</div>
+            <div>University</div>
+            <div>Score</div>
+        </div>
+        <div class="university_block">
+            <div class="university_logo">logo</div>
+            <a href="https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology" target="_blank" class="university_ranking">Massachusetts Institute of Technology (MIT)</a>
+            <div class="university_name">100</div>
+            <a href = "#" class="university_score">Read more</a>
+        </div>
+    </div>
+{% endblock %}
