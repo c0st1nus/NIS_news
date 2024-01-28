@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+{% block content %}
+    <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
+        <div class="main_content">
+            <div class="news">
+                <img src="{{ article.image }}" alt="img">
+                <p>{{ article.text }}</p>
+            </div>
+        </div>
+{% endblock %}

@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Новости НИШ</title>
-</head>
-<body>
-    <h1>Новости НИШ ФМН г.Костанай</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+{% block content %}
+    <h1 style="margin-top: 50px; font-family: Helvetica, sans-serif">Новости</h1>
+        <div class="main_content">
+            {% for ar in articles %}
+            <a href="{% url 'article' ar.id %}" class="link"><div class="news">
+                <img src="{{ ar.image }}" alt="img">
+                <p>{{ ar.introduction }}</p>
+            </div></a>
+            {% endfor %}
+        </div>
+{% endblock %}

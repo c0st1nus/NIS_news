@@ -1,0 +1,316 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+.main_panel {
+    display: flex;
+    justify-content: space-between;
+    font-family: Inter, sans-serif;
+    position: absolute;
+    top: 0;
+    height: 7vh;
+    width: 100%;
+    left: 0;
+    background-color: black;
+}
+
+.main_panel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main_panel li {
+    font-style: normal;
+    font-family: Raleway, serif;
+    font-weight: 500;
+    margin-right: 5vw;
+    color: white;
+}
+
+.main_panel li:first-child {
+    margin-left: 2vw;
+}
+
+.main_panel li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/*-------------------------------------DROPDOWN---------------------------------*/
+
+
+
+.dropdown{
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.dropdown-content {
+    border-radius: 5px;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.main_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 340px;
+    max-width: 690px;
+    font-family: Helvetica, sans-serif;
+    margin: 22px 10% 22px 22px;
+    background-color: #333333;
+    border-radius: 7px;
+}
+
+.news img{
+    color: black;
+    text-decoration: none;
+    margin: 10px 10px 0 10px;
+    background-color: #D9D9D9;
+    min-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 95%;
+}
+.news p{
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width: 95%;
+}
+
+.search_wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 15vw;
+    margin-left: 30vw;
+}
+
+.bx-search{
+    position: absolute;
+    z-index: 1001;
+    color: #000;
+    font-size: 1.2vw;
+    padding-left: 0.45vw;
+}
+
+.main_panel li input[placeholder="Tag search"] {
+    width: 15vw;
+    padding: 0.5vw 0.5vw 0.5vw 1.7vw;
+    font-size: 0.8vw;
+    border: none;
+    border-radius: 20px;
+    z-index: 1000;
+    transition: .35s ease;
+}
+
+.main_panel li input:focus {
+    outline: none;
+    box-shadow: 0 0 15px #FFF;
+}
+
+.main_panel li button {
+    position: absolute;
+    z-index: 1002;
+    top: 0.08vw;
+    right: 0.08vw;
+    padding: 0.45vw 1.2vw;
+    font-size: 0.8vw;
+    border: none;
+    border-radius: 20px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    transform: scale(1.035);
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* -------------------------LOADING ANIMATION--------------------------- */
+
+
+
+.loader {
+    justify-content: center;
+     
+      display: flex;
+      background-color: black;
+}
+ 
+.loader::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #000000;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+
+
+/* -----------------------------------NAVBAR-------------------------------------- */
+
+
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 1vw Raleway;
+    margin: 0 0vw;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* -----------------------------------ADMISSION-------------------------------------- */
+
+.university_content{
+    font-family: Inter, sans-serif;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.university_page_name{
+    font-size: 40px;
+}
+
+.university_head{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 55px;
+    background-color: #6ed4d1;
+    box-shadow:  3px 3px 5px #9e9e9e;
+    border-radius: 0.7vw;
+    margin-bottom: 1.5vw;
+    color: #fff;
+}
+
+.university_head div:first-child{
+    margin-left: 2.8vw;
+}
+
+.university_head div{
+    margin-left: 5.5vw;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.university_head div:last-child{
+    margin-left: 19.2vw;
+}
+
+.university_block{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw 0 2vw;
+    align-items: center;
+    width: 46vw;
+    height: 80px;
+    background-color: #dfdfdf;
+    box-shadow:  5px 5px 5px #a1a1a1;
+    border-radius: 1vw;
+    margin-bottom: 1.5vw;
+}
+
+.university_block a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.university_logo{
+    font-size: 20px;
+}
